@@ -1,0 +1,10 @@
+1. CNN的基本结构
+
+![1](https://github.com/wonderfultina/DeepLearning/blob/master/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CCNN/images/1.png)
+
+图中是一个图形识别的CNN模型。可以看出最左边的船的图像就是我们的输入层，计算机理解为输入若干个矩阵。
+接着是卷积层（Convolution Layer）,卷积层的激活函数使用的是ReLU。它其实很简单，就是ReLU(x)=max(0,x)。
+在卷积层后面是池化层(Pooling layer)，需要注意的是，池化层没有激活函数。
+卷积层+池化层的组合可以在隐藏层出现很多次，上图中出现两次。而实际上这个次数是根据模型的需要而来的。当然我们也可以灵活使用使用卷积层+卷积层，或者卷积层+卷积层+池化层的组合，这些在构建模型的时候没有限制。但是最常见的CNN都是若干卷积层+池化层的组合，如上图中的CNN结构。
+在若干卷积层+池化层后面是全连接层（Fully Connected Layer, 简称FC），只是输出层使用了Softmax激活函数来做图像识别的分类。
+
